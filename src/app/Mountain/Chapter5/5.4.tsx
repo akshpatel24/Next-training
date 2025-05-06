@@ -1,10 +1,10 @@
 "use client"
 import { useState, useEffect } from "react";
-
 interface GitHubUser {
     id: number;
     login: string;
     html_url: string;
+    avatar_url: string;
   }
   
 async function getData() {
@@ -15,7 +15,6 @@ async function getData() {
 
 function FetchingData() {
   const [gitData, setGitData] = useState<GitHubUser[]>([]);
-
   const fetchUsers = async () => {
     const data = await getData();
     setGitData(data);
@@ -34,14 +33,18 @@ function FetchingData() {
             <th>ID</th>
             <th>Login</th>
             <th>Profile Link</th>
+            <th>Image</th>
           </tr>
-        </thead>
+        </thead>``
         <tbody>
           {gitData.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.login}</td>
               <td><a href={user.html_url}>CLick this</a></td>
+              <td>          
+                <img src={user.avatar_url}></img>
+              </td>
               {/* <td>
               </td> */}
             </tr>

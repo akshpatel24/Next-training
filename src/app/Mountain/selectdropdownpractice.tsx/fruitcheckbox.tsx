@@ -17,8 +17,12 @@ function Fruitlist() {
             }
 
     };
+    
+       
+             
     return (
         <>
+           
             {list.map((list, i) => (
                 <label key={i}>
                     <input
@@ -29,6 +33,8 @@ function Fruitlist() {
                     {list}
                     <br />
                 </label>
+
+
             ))}
             <p>Selected fruits: {store.join(',')}</p>
 

@@ -4,6 +4,7 @@ type CustomReturn = [
     data: { sound: string; color: any };
     // data holds the object with the types as string and type.
     onchange: (e: any) => void;
+
   },
   () => void  //for reset function type define
 ];
@@ -23,20 +24,18 @@ export function Custom(initialValue: { sound: string; color: any }):CustomReturn
   }  
 
 
-
-  
-
   //We created a hook with intialvalue, which is really returning an object.
   return [
     {  
   
-       //value is the 2 fields ins
+
+      //value is the 2 fields ins
       // This will take the current value first from the sound
       //identifier then color. Inside the updater fucntion it will then set it equal
-      // to the input name that is being selected.
+      // to the input name that is being selecte      
       data,// this is actually meant to hold the state and use somewhere else.            
       onchange:handleClick// will store and update the new values for sound and color
-    },    
+    },            
         ()=>setData(initialValue) 
         //This will create a reset.
   ];
