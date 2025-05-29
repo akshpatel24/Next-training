@@ -16,10 +16,7 @@ function Fruitlist() {
                 // "store", it will filter out the value that you have unchecked.
             }
 
-    };
-    
-       
-             
+    };          
     return (
         <>
            
@@ -28,6 +25,7 @@ function Fruitlist() {
                     <input
                         type="checkbox"
                         value={list}
+                        //this meant for labeling.
                         onChange={handleChange}
                     />
                     {list}

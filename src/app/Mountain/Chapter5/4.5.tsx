@@ -12,11 +12,9 @@ const submit = (e: any) => {
     console.log(titleProps)    
     console.log("Print:",titleProps.data.sound, titleProps.data.color);        
     // Clear the input fields by resetting the data state
-    
     resetTitle();
     //This is going to take the value we got from
 };
-
 
 // function handleclick(e:any){
 //     setdata({

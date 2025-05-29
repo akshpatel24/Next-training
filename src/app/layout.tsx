@@ -31,7 +31,12 @@ function Navbar() {
       <header className="bg-slate-500-py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-be">
-            <div>
+          <div style={{paddingLeft:10}}>
+              <Link href="/Crud">Home</Link>
+            </div>
+            
+            
+            {/* <div>
               <Link href="/">Home</Link>            
             </div>
             <div style={{paddingLeft:10}}>
@@ -55,7 +60,7 @@ function Navbar() {
             </div>
             <div style={{paddingLeft:10}}>
               <Link href="/Mountain/Chapter5">Practice chapter5 </Link>
-            </div>
+            // </div> */}
           </nav>
         </div>
       </header>

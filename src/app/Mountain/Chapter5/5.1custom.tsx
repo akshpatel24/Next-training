@@ -13,6 +13,8 @@ type CustomReturn = [
 //2. will call the onchange function titleproosp.onchange after matching the sound identifier inside initialvalue object. will set htat value with onchange.
 //3. This will then store both values inside the initialvalue object, which will then 
 //be called printed in the console by using titlesprop.value.sound and titelsporp
+
+
 export function Custom(initialValue: { sound: string; color: any }):CustomReturn{
   //initial value of
   const [data, setData] = useState(initialValue);  
@@ -21,20 +23,20 @@ export function Custom(initialValue: { sound: string; color: any }):CustomReturn
       ...data,
       [e.target.name]: e.target.value,
     }));
+
+
   }  
-
-
   //We created a hook with intialvalue, which is really returning an object.
   return [
     {  
-  
-
       //value is the 2 fields ins
       // This will take the current value first from the sound
       //identifier then color. Inside the updater fucntion it will then set it equal
       // to the input name that is being selecte      
       data,// this is actually meant to hold the state and use somewhere else.            
-      onchange:handleClick// will store and update the new values for sound and color
+      onchange:handleClick//// maybe for passing onchange event object, not JSX
+      // maybe for passing onchange event object, not JSX otherwize in nornal input tags and things
+      //it is fine.
     },            
         ()=>setData(initialValue) 
         //This will create a reset.

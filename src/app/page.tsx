@@ -2,17 +2,19 @@
 import SelectProper from "./Mountain/selectdropdownpractice.tsx/page";
 import SelectPropertwo from "./Mountain/selectdropdownpractice.tsx/selectdropdown2";
 import { useContext } from "react";
+import Productlist from "./Crud/page";
 // import TreeContext from 
 import Example from "./Mountain/Chapter3practice/page";
-import Arrayprint from "./Mountain/Chapter5/5.3";
+// import Arrayprint from "./Mountain/Chapter5/5.3";
 function Home() {
   return (
    <>
-  <h1>Hello world</h1>
+  {/* <h1>Hello world</h1>
   <SelectProper/>
   <br></br>
   <SelectPropertwo/>
-  <Arrayprint/>
+  <Arrayprint/> */}
+  <Productlist/>
   
   {/* <Example/> */}
    </>
